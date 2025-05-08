@@ -7,3 +7,4 @@ A set of Python helper scripts for automating the processing of molecular dockin
 2. As a result, we obtain output files from BINANA, which contain information about the amino acid environment around each ligand. We also have complex files that include both the ligand coordinates and binding energy values. These files are processed using a Python script, producing two .txt files. These contain information on: the name of each complex, its binding energy, and the amino acid environment within 2.5 Å and 4 Å.
 3. The resulting .txt files can be opened in Excel and converted into tables for further analysis.
 ## Scripts Overview
+- `split_compl.py` — splits multi-model AutoDock Vina output files into separate files with each pose saved individually
