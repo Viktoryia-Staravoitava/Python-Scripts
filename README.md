@@ -3,7 +3,7 @@ A set of Python helper scripts for automating the processing of molecular dockin
 ## Workflow Overview
 1. After docking, AutoDock Vina produces one output file per protein-ligand pair. Each file contains multiple docking poses (complexes), depending on the docking settings. These files include only the ligand coordinates.
    - Each such file needs to be split into individual complexes.
-   - Next, the protein structure must be added to each of those ligand files to prepare them for BINANA analysis and for subsequent visualization.
+   - Next, the protein structure must be added to each of those ligand files to prepare them for subsequent visualization.
 2. As a result, we obtain output files from BINANA, which contain information about the amino acid environment around each ligand. We also have complex files that include both the ligand coordinates and binding energy values. These files are processed using a Python script, producing two .txt files. These contain information on: the name of each complex, its binding energy, and the amino acid environment within 2.5 Å and 4 Å.
 3. The resulting .txt files can be opened in Excel and converted into tables for further analysis.
 ## Requirements
@@ -11,3 +11,4 @@ A set of Python helper scripts for automating the processing of molecular dockin
 - No external packages required
 ## Scripts Overview
 - `split_compl.py` — splits multi-model AutoDock Vina output files into separate files with each pose saved individually
+- `adding_prot_2.py` — merges ligand poses with the corresponding protein structure
